@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página con CSS Grid</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.pagina {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 80px 60px 300px 60px;
+    grid-template-areas:
+        "encabezado encabezado encabezado"
+        "menu menu menu"
+        "contenido contenido lateral"
+        "pie pie pie";
+    gap: 10px;
+}
+
+header {
+    grid-area: encabezado;
+    background-color: steelblue;
+    color: white;
+}
+
+nav {
+    grid-area: menu;
+    background-color: lightblue;
+}
+
+main {
+    grid-area: contenido;
+    background-color: lightgreen;
+}
+
+aside {
+    grid-area: lateral;
+    background-color: peachpuff;
+}
+
+footer {
+    grid-area: pie;
+    background-color: gray;
+    color: white;
+}
+
+header, nav, main, aside, footer {
+    padding: 15px;
+    text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div class="pagina">
+    <header>Encabezado</header>
+    <nav>Menú de navegación</nav>
+    <main>Contenido principal</main>
+    <aside>Información lateral</aside>
+    <footer>Pie de página</footer>
+</div>
+
+</body>
+</html>
